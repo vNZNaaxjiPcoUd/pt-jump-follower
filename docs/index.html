@@ -7,7 +7,16 @@
 <body>
     <p id="message"></p>
     <script>
-        window.location.href = "https://duckduckgo.com/";
+        function processAndRedirect() {
+            const baseUrl = "https://duckduckgo.com/";
+
+            const url = window.location.href;
+            const lastPart = url.match(/[^/]+$/)[0];
+            
+            const newUrl = `${baseUrl}${lastPart}`;
+            window.location.href = newUrl;
+        }
+        processAndRedirect();
     </script>
 </body>
-</html>  
+</html>    
