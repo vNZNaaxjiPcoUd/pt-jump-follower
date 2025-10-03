@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+
+<head>
+    <base target="_blank">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<style>
+html,
+body {
+		color: rgb(180, 180, 180);
+		background-color: rgb(1, 1, 1);
+		font-family: 'Noto Sans Mono CJK TC', 'Menlo', 'Consolas', 'Courier New', monospace; 
+		font-size: 18px;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+pre,code {
+	color: inherit;
+	text-decoration: none;
+}
+
+table, tr, th ,td ,tr:nth-child(even),tr:nth-child(odd){
+	color: rgb(120, 120, 120);
+	background-color: rgb(1, 1, 1);
+	text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+	color: rgb(250, 250, 250);
+}
+</style>
+
+<title>{% if page.title == "" %}{{ page.name }}{% else %}{{ page.title }}{% endif %}</title>
+</head>
+
+<body>
+{{ content }}
+</body>
+
+</html>
