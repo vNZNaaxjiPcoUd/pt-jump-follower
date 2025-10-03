@@ -11,7 +11,7 @@
             const baseUrl = "https://duckduckgo.com/";
 
             const url = window.location.href;
-            const lastPart = url.match(/[^/]+$/)[0];
+            const lastPart = url.match(/[^/]+$/)?.[0] ?? "";
             
             const newUrl = `${baseUrl}${lastPart}`;
             window.location.href = newUrl;
